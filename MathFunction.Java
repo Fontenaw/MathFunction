@@ -18,34 +18,34 @@ public class Main
         int SUB1 = A - B;
         int SUB2 = B-A;
         if (C == SUB1 || C == SUB2){
-            FList[Count]="-";
+            FList[Count]="-"; //if C = A-B or B-A, then - is put in FList at Count 
             Count = Count + 1;
         }
         //Multiply
         int MUL = A*B;
         if (C == MUL){
-            FList[Count]="*";
+            FList[Count]="*"; //if C= A*B, then * is put in FList at Count
             Count = Count + 1;
         }
         //Division
         if (B == 0){
-            
+            //to prevent division by zero
         } 
         else{
             int DIV1 = A/B;
             if (C == DIV1){
-                FList[Count]="/";
+                FList[Count]="/"; //if C = A/B then / is put in FList at Count
                 Count = Count + 1;
             }
         }
     
         if (A == 0){
-            
+            //to prevent division by zero
         } 
         else{
-            int DIV2 = A/B;
+            int DIV2 = B/A;
             if (C == DIV2){
-                FList[Count]="/";
+                FList[Count]="/"; //if C = B/A, then / is put in FList at Count
                 Count = Count + 1;
             }
         }
